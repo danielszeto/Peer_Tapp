@@ -5,6 +5,7 @@ var cors = require('cors');
 var OAuth = require('../secrets');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var Beer = require('./models/beer'),
 
 app.use(cors());
 
