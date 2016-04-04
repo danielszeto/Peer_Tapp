@@ -1,0 +1,33 @@
+{
+  "name": "peer_tapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-aria": "^1.5.3",
+    "angular-jwt": "0.0.9",
+    "angular-material": "^1.0.7",
+    "angular-storage": "0.0.15",
+    "angular-ui-router": "^1.0.0-alpha.3",
+    "auth0-angular": "^4.1.0",
+    "body-parser": "^1.15.0",
+    "mongoose": "^4.4.11",
+    "ui-router": "^1.0.0-alpha0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielszeto/Peer_Tapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danielszeto/Peer_Tapp/issues"
+  },
+  "homepage": "https://github.com/danielszeto/Peer_Tapp#readme"
+}
