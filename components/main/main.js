@@ -1,7 +1,34 @@
-function mainController() {
-	this.test = "Hello";
+(function() {
+
+	'use strict';
+
+	angular
+		.module('mainController', [])
+		.controller('mainController', mainController)
+		.service('Beer', function($resource) {
+			return $resource('http://localhost:3000/api/beers/:id', {id: '@_id'}, {
+				update: {
+					method: 'PUT'
+				}
+			})
+		});
+
+
+	function mainController(Beer, $scope) {
+
+		this.newBeer = {};
+		this.beers = Beer.query();
+	}
+
+})();
+
+
+
+
+// function mainController() {
+// 	this.test = "Hello";
   // this.beers = Beer.query();
-}
+// }
 // (function() {
 
 // 	'use strict';

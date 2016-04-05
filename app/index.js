@@ -1,8 +1,7 @@
 'use strict';
 
 angular
-	.module('peertapp', ['auth0', 'angular-storage','angular-jwt', 'ngMaterial', 'ui.router','ngResource'])
-	.controller("mainController", mainController)
+	.module('peertapp', ['auth0', 'angular-storage','angular-jwt', 'ngMaterial', 'ui.router','ngResource', 'profileController','mainController'])
 	.config(function($provide, authProvider, $urlRouterProvider, $stateProvider, $httpProvider, jwtInterceptorProvider) {
 
 		authProvider.init({

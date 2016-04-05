@@ -1,11 +1,9 @@
 <div class="beerShow">
 	<h1>BEER SHOW</h1>
-	{{main.test}}
-     <!-- <ul ng-repeat="beer in main.beers | orderBy: '-upvotes' ">
-        <a class="beerBrand" href="/beers/{{beer._id}}">{{beer.name}} </a>
+     <ul ng-repeat="beer in main.beers">
+        <div>{{beer.name}} </div>
         <div class="beerKind"> {{beer.kind}} </div>
-        <img src="{{beer.image}}"> <br/><br/>
+<!--         <img src="{{beer.image}}"> <br/><br/> -->
         <button class="btn btn-default" class='delete' ng-click="main.deleteShoe(shoe)">Delete</button>
         <button ng-click="home.displayEditForm=true" class="btn btn-default">Edit</button>
     </div>
- -->

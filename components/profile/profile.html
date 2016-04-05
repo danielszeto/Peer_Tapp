@@ -19,11 +19,23 @@
 	</md-card>
 </md-content>
 
-<!-- <div class="beerShow">
-     <ul ng-repeat="beer in user.beers | orderBy: '-upvotes' ">
-        <a class="beerBrand" href="/beers/{{beer._id}}">{{beer.name}} </a>
-        <div class="beerKind"> {{beer.kind}} </div>
-        <img src="{{beer.image}}"> <br/><br/>
-        <button class="btn btn-default" class='delete' ng-click="user.deleteShoe(shoe)">Delete</button>
-        <button ng-click="home.displayEditForm=true" class="btn btn-default">Edit</button>
-    </div> -->
+<form class="add-beer" ng-submit='home.createBeer()'>
+      <div>
+        <label for="beer-name">Name:</label>
+        <input type="text" id="beer-name" ng-model="home.newBeer.brand" placeholder="brand">
+      </div>
+      <div>
+        <label for="newBeer-kind">Kind:</label>
+        <input type="text" id="newBeer-kind" ng-model="home.newBeer.kind" placeholder="description">
+      </div>
+      <div>
+        <label for="newBeer-style">Style:</label>
+        <input type="text" id="newBeer-style" ng-model="home.newBeer.style" placeholder="style">
+      <div>
+       <div>
+        <label for="newBeer-image">Image:</label>
+        <input type="text" id="newBeer-image" ng-model="home.newBeer.image" placeholder="style">
+      <div>
+        <input type="submit" value="Add Beer">
+      </div>
+    </form>
