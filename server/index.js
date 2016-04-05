@@ -74,8 +74,9 @@ app.put('/api/beers/:id', function (req, res) {
     console.log('hit update route');
     Beer.findById({_id: id}, function (err, foundBeer){
         if (err) console.log(err);
-        foundBeer.brand = req.body.brand;
+        foundBeer.name = req.body.name;
         foundBeer.kind = req.body.kind;
+        foundBeer.style = req.body.style;
         foundBeer.upvotes = req.body.upvotes;
         foundBeer.save(function (err, saved){
             if (err) { console.log(err);}

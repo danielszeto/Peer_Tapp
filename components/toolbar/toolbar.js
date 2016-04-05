@@ -6,20 +6,11 @@
 		.module('peertapp')
 		.directive('toolbar', toolbar);
 
-	function toolbar() {
-		return {
-			templateUrl: 'components/toolbar/toolbar.html',
-			controller: toolbarController,
-			controllerAs: 'toolbar'
-		};
-	}
-
 	function toolbarController(auth, store, $location){
 
-		var vm = this;
-		vm.login = login;
-		vm.logout = logout;
-		vm.auth = auth;
+		this.login = login;
+		this.logout = logout;
+		this.auth = auth;
 
 		function login() {
 
@@ -40,4 +31,12 @@
 		}
 	}
 
-	})();
+	function toolbar() {
+		return {
+			templateUrl: 'components/toolbar/toolbar.html',
+			controller: toolbarController,
+			controllerAs: 'toolbar'
+		};
+	}
+
+})();

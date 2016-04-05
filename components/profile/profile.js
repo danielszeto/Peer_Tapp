@@ -1,10 +1,10 @@
-(function() {
+// (function() {
 
-	'use strict';
+// 	'use strict';
 
-	angular
-		.module('peertapp')
-		.controller('profileController', profileController);
+// 	angular
+// 		.module('peertapp')
+// 		.controller('profileController', profileController);
 
 	function profileController($http, store) {
 
@@ -30,4 +30,4 @@
 		}
 	}
 
-})();
+// })();
