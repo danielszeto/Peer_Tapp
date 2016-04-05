@@ -3,21 +3,35 @@
 	'use strict';
 
 	angular
-		.module('mainController', [])
+		.module('mainController', ['ngResource'])
 		.controller('mainController', mainController)
 		.service('Beer', function($resource) {
-			return $resource('http://localhost:3000/api/beers/:id', {id: '@_id'}, {
+			return $resource('http://localhost:3000/api/beers', { id: '@_id'}, {
+				get: {
+					method: 'GET'
+				},
 				update: {
 					method: 'PUT'
+				},
+				query: {
+					method:'GET',
+					isArray: true
 				}
-			})
+			});
 		});
 
 
-	function mainController(Beer, $scope) {
+	function mainController(Beer) {
+		var vm = this;
+		vm.newBeer = [];
+		console.log(Beer.query());
+		var test = Beer.query(null, function(test, data) {
 
-		this.newBeer = {};
-		this.beers = Beer.query();
+			console.log(data);
+
+		});
+		console.log("test", test);
+		// this.beers = Beer.query();
 	}
 
 })();

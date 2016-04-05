@@ -35,7 +35,8 @@ app.get('/api/beers', function (req, res) {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
-      res.json(allBeers);
+      console.log('BEERS', allBeers);
+      res.status(200).json(allBeers);
     }
   });
 });
@@ -54,11 +55,11 @@ app.post('/api/beers', function (req, res) {
 app.get('/api/beers/:id', function (req, res) {
 // get beer id from url params (`req.params`)
   var beerId = req.params.id;
-
-
+  console.log('hit get route');
   // find beer in db by id
   Beer.findOne({ _id: beerId }, function (err, foundBeer) {
     if (err) {
+      console.log(err);
       res.status(500).json({ error: err.message });
     } else {
       res.json(foundBeer);
